@@ -1,0 +1,12 @@
+{
+  "name": "form-cookie-app",
+  "version": "1.0.0",
+  "description": "A simple form application with cookie storage",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .welcome-container {
+            text-align: center;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .welcome-message {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .user-name {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-message">
+            Welcome, <span id="userName" class="user-name"></span>!
+        </div>
+    </div>
+    <script>
+        function getCookie(name) {
+            const cookieName = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.indexOf(cookieName) === 0) {
+                    return decodeURIComponent(cookie.substring(cookieName.length, cookie.length));
+                }
+            }
+            return "";
+        }
+
+        // Get the name as soon as the page loads
+        const userName = getCookie("userName");
+        if (userName && userName.trim() !== "") {
+            document.getElementById("userName").textContent = userName;
+        } else {
+            document.getElementById("userName").textContent = "Guest";
+        }
+    </script>
+</body>
+</html>

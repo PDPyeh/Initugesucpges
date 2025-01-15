@@ -37,12 +37,30 @@
             color: #4CAF50;
             font-weight: bold;
         }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <div class="welcome-container">
         <div class="welcome-message">
             Welcome, <span id="userName" class="user-name"></span>!
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="back-button">Back to Home</a>
         </div>
     </div>
     <script>
